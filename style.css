@@ -1,0 +1,279 @@
+body {
+font-family: 'Comic Neue', cursive;
+margin: 0;
+padding: 0;
+background: linear-gradient(135deg, #f9c5d1 0%, #f2a6c2 50%, #fce4ec 100%);
+color: #5d2a42;
+min-height: 100vh;
+}
+
+.container {
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px;
+}
+
+header {
+text-align: center;
+padding: 30px 0;
+position: relative;
+}
+
+h1 {
+font-size: 3rem;
+margin: 0;
+background: linear-gradient(to right, #ff6b6b, #ff8e8e, #ffb3b3);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.boba-cup {
+width: 150px;
+height: 200px;
+background: #fff;
+border-radius: 0 0 20px 20px;
+position: relative;
+margin: 40px auto;
+border: 3px solid #5d2a42;
+overflow: hidden;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+animation: float 3s ease-in-out infinite;
+}
+
+.boba-lid {
+width: 160px;
+height: 30px;
+background: #5d2a42;
+border-radius: 20px 20px 0 0;
+position: absolute;
+top: -30px;
+left: -5px;
+}
+
+.boba-straw {
+width: 10px;
+height: 120px;
+background: #f8edeb;
+position: absolute;
+top: -100px;
+left: 50%;
+transform: translateX(-50%) rotate(5deg);
+border-radius: 5px;
+z-index: 2;
+}
+
+.boba-pearl {
+width: 20px;
+height: 20px;
+background: #3a0ca3;
+border-radius: 50%;
+position: absolute;
+animation: bounce 4s infinite;
+}
+
+.tea {
+width: 100%;
+height: 100%;
+background: linear-gradient(to bottom, #f9c5d1, #f2a6c2);
+position: absolute;
+bottom: 0;
+animation: swirl 10s infinite linear;
+}
+
+@keyframes float {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-15px); }
+}
+
+@keyframes bounce {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-20px); }
+}
+
+@keyframes swirl {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+.boba-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 30px;
+margin: 40px 0;
+}
+
+.boba-item {
+background: rgba(255, 255, 255, 0.8);
+border-radius: 15px;
+padding: 20px;
+text-align: center;
+transition: transform 0.3s;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+border: 2px dashed #5d2a42;
+}
+
+.flavor-icon {
+font-size: 50px;
+margin-bottom: 15px;
+display: block;
+}
+
+.testimonials {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+margin: 40px 0;
+gap: 20px;
+}
+
+.testimonial {
+background: rgba(255, 255, 255, 0.9);
+padding: 20px;
+border-radius: 15px;
+width: 250px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+position: relative;
+}
+
+footer {
+text-align: center;
+padding: 20px;
+margin-top: 40px;
+background: rgba(255, 255, 255, 0.7);
+border-radius: 15px 15px 0 0;
+}
+
+.pearls {
+display: flex;
+justify-content: center;
+gap: 10px;
+margin: 20px 0;
+}
+
+.pearl {
+width: 15px;
+height: 15px;
+background: #3a0ca3;
+border-radius: 50%;
+animation: pearl-bounce 2s infinite;
+}
+
+@keyframes pearl-bounce {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 768px) {
+h1 { font-size: 2rem; }
+.boba-grid { grid-template-columns: repeat(2, 1fr); }
+.boba-straw {
+height: 80px;
+top: -60px;
+transform: translateX(-50%) rotate(15deg);
+}
+.boba-cup { animation: float-mobile 3s ease-in-out infinite; }
+}
+
+@media (max-width: 480px) {
+.boba-grid { grid-template-columns: 1fr; }
+.boba-straw {
+height: 60px;
+top: -40px;
+transform: translateX(-50%) rotate(25deg);
+}
+}
+
+@keyframes float-mobile {
+0%, 100% { transform: translateY(0) rotate(-5deg); }
+50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+.testimonial:before {
+content: """;
+font-size: 60px;
+color: #f2a6c2;
+position: absolute;
+top: -20px;
+left: 10px;
+line-height: 1;
+}
+
+.boba-item:hover {
+transform: scale(1.05);
+}
+
+h3 {
+margin-top: 0;
+color: #5d2a42;
+}
+
+.pearl:nth-child(2) { animation-delay: 0.2s; }
+.pearl:nth-child(3) { animation-delay: 0.4s; }
+.pearl:nth-child(4) { animation-delay: 0.6s; }
+/* ===== Builder Page Styles ===== */
+.builder-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
+margin: 30px 0;
+}
+
+.customizer {
+background: rgba(255,255,255,0.8);
+padding: 25px;
+border-radius: 15px;
+}
+
+.options button {
+background: #f2a6c2;
+border: none;
+padding: 10px 15px;
+margin: 5px;
+border-radius: 20px;
+cursor: pointer;
+}
+
+.options button.active {
+background: #5d2a42;
+color: white;
+}
+
+.toppings label {
+display: block;
+margin: 10px 0;
+cursor: pointer;
+}
+
+.preview {
+text-align: center;
+}
+
+.slider {
+width: 100%;
+margin: 15px 0;
+}
+
+.order-btn {
+background: #5d2a42;
+color: white;
+border: none;
+padding: 12px 25px;
+border-radius: 25px;
+font-size: 1.1rem;
+cursor: pointer;
+transition: transform 0.3s;
+}
+
+.order-btn:hover {
+transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.builder-grid {
+grid-template-columns: 1fr;
+}
+}

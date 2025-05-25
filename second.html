@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Build Your Boba | Boba Bliss</title>
+</head>
+<body>
+<div class="container">
+<nav>
+<a href="index.html">🏠 Home</a>
+<a href="second.html">✨ Build Your Boba</a>
+</nav>
+
+<header>
+<h1>Create Your Dream Drink</h1>
+<p>Mix and match to make cursed or god-tier combos</p>
+</header>
+
+<div class="builder-grid">
+<div class="customizer">
+<h2>1. Choose Your Base</h2>
+<div class="options">
+<button class="active" data-base="milk-tea">Milk Tea</button>
+<button data-base="fruit-tea">Fruit Tea</button>
+<button data-base="matcha">Matcha</button>
+</div>
+
+<h2>2. Pick Your Toppings</h2>
+<div class="toppings">
+<label><input type="checkbox" name="pearls"> Tapioca Pearls</label>
+<label><input type="checkbox" name="jelly"> Coconut Jelly</label>
+<label><input type="checkbox" name="pudding"> Pudding</label>
+</div>
+
+<h2>3. Select Sugar Level</h2>
+<input type="range" min="0" max="100" value="50" class="slider">
+</div>
+
+<div class="preview">
+<div class="boba-cup" id="custom-cup">
+<div class="boba-lid"></div>
+<div class="boba-straw"></div>
+<div class="tea" id="tea-base"></div>
+</div>
+<h3>Your Creation:</h3>
+<p id="drink-name">Basic Milk Tea</p>
+<p class="price">$5.99</p>
+<button class="order-btn">Add to Cart</button>
+</div>
+</div>
+
+<footer>
+<div class="pearls">
+<div class="pearl"></div>
+<div class="pearl"></div>
+<div class="pearl"></div>
+</div>
+<p>© 2025 Boba Bliss | No refunds for cursed combos</p>
+</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
